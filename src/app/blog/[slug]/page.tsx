@@ -12,20 +12,18 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: {
-  params: {
-    slug: string;
-  };
-}): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+}: any): Promise<Metadata | undefined> {
+  const post = await getPost(params.slug);
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = image
+    ? `${DATA.url}${image}`
+    : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -51,14 +49,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}) {
-  let post = await getPost(params.slug);
+export default async function Blog({ params }: any) {
+  const { slug } = params;
+
+  const post = await getPost(slug);
 
   if (!post) {
     notFound();
