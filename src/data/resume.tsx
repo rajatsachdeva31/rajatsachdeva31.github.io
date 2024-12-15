@@ -32,7 +32,6 @@ export type Hackathon = {
   image?: string;
   links?: HackathonLink[];
   win?: string;
-  mlh?: string;
 };
 
 export const DATA = {
@@ -42,21 +41,27 @@ export const DATA = {
   location: "Toronto, ON",
   locationLink: "https://www.google.com/maps/place/toronto",
   description:
-    "Research Associate | Full Stack Software Engineer | AWS & Azure Certified | React.js | Next.js | Node.js | Python | Frontend Specialist",
+    "Full Stack Software Engineer | AWS & Azure Certified | React.js | Next.js | Node.js | Python | Frontend Specialist",
   summary:
     "As a detail-oriented and passionate Full Stack Software Engineer with over 2 years of hands-on experience in the IT industry, I specialize in frontend development and creating user-centric, responsive web applications. My experience spans across multiple frameworks and languages, including JavaScript, React.js, Angular, Node.js, Python, AWS, and SQL, enabling me to deliver scalable solutions for business needs. I aspire to build a career in IT, and eventually create innovative SaaS businesses.",
   avatarUrl: "/me.png",
   skills: [
-    "React",
+    "React.js",
     "Next.js",
-    "Typescript",
     "Node.js",
+    "Javascript",
+    "Typescript",
     "Python",
     "Java",
+    "MySQL",
+    "Oracle SQL",
     "Postgres",
     "Docker",
     "Git",
+    "Github",
     "AWS",
+    "Postman",
+    "Vercel",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -117,8 +122,8 @@ export const DATA = {
       location: "Remote",
       title: "Software Engineer",
       logoUrl: "/coforge.png",
-      start: "January 2021",
-      end: "April 2021",
+      start: "Jan 2021",
+      end: "Apr 2021",
       description:
         "Built and optimized dynamic email templates for marketing campaigns using HTML, CSS, and JavaScript. Collaborated with UI/UX designers to ensure email templates aligned with brand guidelines and accessibility standards. Built an application for employees from scratch to manage customer data, policies, claims, and renewals, streamlining insurance operations and improving data accuracy. Optimized application performance using MaterialUI, Angular, Typescript, reducing page load times by 25%. Streamlined deployment through CI/CD pipelines in GitLab, reducing production deployment times by 40% and ensuring a 100% on-time release rate.",
     },
@@ -133,14 +138,43 @@ export const DATA = {
       end: "2025",
     },
     {
-      school: "Guru Gobind Singh Indraprastha University",
+      school: "Indraprastha University",
       href: "https://www.ipu.ac.in/",
       degree: "Bachelor's of Technology in Information Technology",
       logoUrl: "/ipu.png",
-      start: "2016",
+      start: "2018",
       end: "2021",
     },
   ],
   projects: [] as Project[],
-  hackathons: [] as Hackathon[],
+  hackathons: [
+    {
+      title: "TBC & Matera Fintech Weekend",
+      dates: "November 8th - 10th, 2024",
+      location: "North York, Ontario",
+      description:
+        "Developed AI-powered fraud detection and middleware to detect fake QR codes, displaying risk scores to users and notifying merchants. Secured a spot in the top 6 finalists for innovative payment security solutions.",
+      image: "/matera.png",
+      links: [],
+    },
+    {
+      title: "AWS DeepRacer Competition 2024",
+      dates: "April 23th - 24th, 2024",
+      location: "Etobicoke, Ontario",
+      description:
+        "Led a team of four in the AWS DeepRacer competition at Humber College, designing and implementing a deep learning model for autonomous racing. Secured 3rd place by optimizing reinforcement learning algorithms to detect and navigate the track effectively.",
+      image: "/deepracer.png",
+      links: [],
+    },
+    {
+      title: "Bell Geekfest Hackathon 2023",
+      dates: "September 22nd - 24th, 2023",
+      location: "Mississauga, Ontario",
+      description:
+        "Developed an application to detect malicious URLs, focusing on Online Privacy and Security. Collaborated with a team to design and present the solution, leveraging industry mentorship and pitching to a panel of judges.",
+      icon: "public",
+      image: "/geekfest.png",
+      links: [],
+    },
+  ],
 } as const;
