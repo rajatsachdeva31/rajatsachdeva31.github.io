@@ -37,7 +37,7 @@ export type Hackathon = {
 export const DATA = {
   name: "Rajat Sachdeva",
   initials: "RS",
-  url: "https://rajat.ca",
+  url: "https://rajatsachdeva.ca",
   location: "Toronto, ON",
   locationLink: "https://www.google.com/maps/place/toronto",
   description:
@@ -122,8 +122,8 @@ export const DATA = {
       location: "Remote",
       title: "Software Engineer",
       logoUrl: "/coforge.png",
-      start: "Jan 2021",
-      end: "Apr 2021",
+      start: "May 2021",
+      end: "Aug 2023",
       description:
         "Built and optimized dynamic email templates for marketing campaigns using HTML, CSS, and JavaScript. Collaborated with UI/UX designers to ensure email templates aligned with brand guidelines and accessibility standards. Built an application for employees from scratch to manage customer data, policies, claims, and renewals, streamlining insurance operations and improving data accuracy. Optimized application performance using MaterialUI, Angular, Typescript, reducing page load times by 25%. Streamlined deployment through CI/CD pipelines in GitLab, reducing production deployment times by 40% and ensuring a 100% on-time release rate.",
     },
