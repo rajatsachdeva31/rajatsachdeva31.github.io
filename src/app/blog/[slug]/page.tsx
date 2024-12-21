@@ -3,7 +3,7 @@ import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -58,6 +58,8 @@ export default async function Blog({ params }: any) {
     notFound();
   }
 
+  const BLUR_FADE_DELAY = 0.04;
+
   return (
     <section id="blog">
       <script
@@ -82,20 +84,24 @@ export default async function Blog({ params }: any) {
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
-      </h1>
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+          {post.metadata.title}
+        </h1>
+      </BlurFade>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
-        <Suspense fallback={<p className="h-5" />}>
+        <BlurFade delay={BLUR_FADE_DELAY + 0.04}>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             {formatDate(post.metadata.publishedAt)}
           </p>
-        </Suspense>
+        </BlurFade>
       </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
-      ></article>
+      <BlurFade delay={BLUR_FADE_DELAY + 0.08}>
+        <article
+          className="prose dark:prose-invert"
+          dangerouslySetInnerHTML={{ __html: post.source }}
+        ></article>
+      </BlurFade>
     </section>
   );
 }
