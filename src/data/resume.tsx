@@ -37,7 +37,7 @@ export type Hackathon = {
 export const DATA = {
   name: "Rajat Sachdeva",
   initials: "RS",
-  url: "https://rajatsachdeva.ca",
+  url: "https://rajatsachdeva.me",
   location: "Toronto, ON",
   locationLink: "https://www.google.com/maps/place/toronto",
   description:
@@ -73,21 +73,21 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/r-sachdeva3105/",
+        url: "https://github.com/rajatsachdeva31/",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/r-sachdeva3105/",
+        url: "https://www.linkedin.com/in/rajatsachdeva31/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/r_sachdeva3105/",
+        url: "https://x.com/rajatsachdeva31/",
         icon: Icons.x,
 
         navbar: true,

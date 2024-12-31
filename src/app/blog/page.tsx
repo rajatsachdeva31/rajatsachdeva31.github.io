@@ -33,7 +33,7 @@ export default async function BlogPage() {
         </p>
         <Image
           src="/blog.png"
-          alt="Memoji having idea"
+          alt="Memoji having an idea"
           width={200}
           height={100}
         />
