@@ -43,7 +43,7 @@ export const DATA = {
   description:
     "Full Stack Software Engineer | AWS & Azure Certified | React.js | Next.js | Node.js | Python | Frontend Specialist",
   summary:
-    "As a detail-oriented and passionate Full Stack Software Engineer with over 2 years of hands-on experience in the IT industry, I specialize in frontend development and creating user-centric, responsive web applications. My experience spans across multiple frameworks and languages, including JavaScript, React.js, Angular, Node.js, Python, AWS, and SQL, enabling me to deliver scalable solutions for business needs. I aspire to build a career in IT, and eventually create innovative SaaS businesses.",
+    "Hey there! I'm Rajat, a Full Stack Software Engineer based in Canada with 2+ years of experience crafting clean, responsive, and user-friendly web applications. 🚀 I specialize in frontend magic with frameworks like React, Next, Angular and love building seamless, scalable solutions using JavaScript, Typescript, Node, AWS, and SQL. 💻 Let's connect and create something awesome! ✨",
   avatarUrl: "/me.png",
   skills: [
     "React.js",
@@ -104,6 +104,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Credwise",
+      href: "https://credwise.ca/",
+      badges: [],
+      location: "Remote",
+      title: "Full Stack Developer",
+      logoUrl: "/credwise.png",
+      start: "Jan 2025",
+      end: "Present",
+      description:
+        "Built a web app, ImmigrateX, using the MERN stack to help immigrants access housing, car rentals, and essential resources for transitioning to Canada. Designed and developed client onboarding features for realtors and car dealerships, including document uploads, soft credit checks, and service listings.",
+    },
+    {
       company: "Humber Polytechnic",
       href: "https://humber.ca/",
       badges: [],
@@ -111,7 +123,7 @@ export const DATA = {
       title: "Research Associate",
       logoUrl: "/humber.png",
       start: "Nov 2024",
-      end: "Present",
+      end: "Dec 2024",
       description:
         "Built a comprehensive resource library by collecting and verifying video resources, literature, and website articles to bridge theoretical knowledge with practical applications. Developed a specialized library of resources focused on Advanced Java, C#, data structures, and design patterns, supporting students and educators in mastering these critical technical topics.",
     },
@@ -125,7 +137,7 @@ export const DATA = {
       start: "May 2021",
       end: "Aug 2023",
       description:
-        "Built and optimized dynamic email templates for marketing campaigns using HTML, CSS, and JavaScript. Collaborated with UI/UX designers to ensure email templates aligned with brand guidelines and accessibility standards. Built an application for employees from scratch to manage customer data, policies, claims, and renewals, streamlining insurance operations and improving data accuracy. Optimized application performance using MaterialUI, Angular, Typescript, reducing page load times by 25%. Streamlined deployment through CI/CD pipelines in GitLab, reducing production deployment times by 40% and ensuring a 100% on-time release rate.",
+        "Developed responsive web interfaces for the Lifewriter project, enhancing UI/UX for a leading US insurance company. Optimized application functionality by implementing React, Typescript, Spring Boot and SQL technologies, which decreased page load times by 20%. Enhanced team efficiency by actively participating in Agile ceremonies, collaborating with cross-functional teams and UI/UX designers to ensure brand consistency and accessibility.",
     },
   ],
   education: [
@@ -146,7 +158,39 @@ export const DATA = {
       end: "2021",
     },
   ],
-  projects: [] as Project[],
+  projects: [
+    {
+      title: "FormFlow",
+      description:
+        "A Next.js application that allows users to create and customize beautiful forms with a drag-and-drop interface. Powered by cutting-edge technologies, this project offers seamless form creation, sharing, and submission tracking.",
+      href: "https://tryformflow.vercel.app",
+      dates: "Nov 2024 - Dec 2024",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Clerk",
+        "Vercel",
+        "Dnd-kit",
+        "Shadcn",
+        "TailwindCSS",
+      ],
+      image: "/formflow.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://tryformflow.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/rajatsachdeva31/FormFlow",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+  ],
   hackathons: [
     {
       title: "TBC & Matera Fintech Weekend",

@@ -85,7 +85,7 @@ export default async function Blog({ params }: any) {
         }}
       />
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+        <h1 className="title font-bold text-4xl tracking-tight max-w-[650px]">
           {post.metadata.title}
         </h1>
       </BlurFade>

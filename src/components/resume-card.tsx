@@ -39,13 +39,13 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
-      <Card className="flex">
-        <div className="flex-none">
+    <Card className="flex">
+      <div className="flex-none">
+        <Link
+          className="block cursor-pointer"
+          target="_blank"
+          href={href || "#"}
+        >
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
               src={logoUrl}
@@ -54,8 +54,15 @@ export const ResumeCard = ({
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
-        </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
+        </Link>
+      </div>
+
+      <div className="flex-grow ml-4 items-center flex-col group">
+        <Link
+          href={"/"}
+          className="cursor-pointer"
+          onClick={handleClick}
+        >
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
@@ -103,8 +110,8 @@ export const ResumeCard = ({
               {description}
             </motion.div>
           )}
-        </div>
-      </Card>
-    </Link>
+        </Link>
+      </div>
+    </Card>
   );
 };
