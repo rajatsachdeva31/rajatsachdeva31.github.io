@@ -98,7 +98,7 @@ export default async function Blog({ params }: any) {
       </div>
       <BlurFade delay={BLUR_FADE_DELAY + 0.08}>
         <article
-          className="prose dark:prose-invert"
+          className="prose dark:prose-invert pb-8"
           dangerouslySetInnerHTML={{ __html: post.source }}
         ></article>
       </BlurFade>
