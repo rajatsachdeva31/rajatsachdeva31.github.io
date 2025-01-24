@@ -219,7 +219,7 @@ export default function Page() {
                 >
                   email
                 </Link>{" "}
-                or shoot me a dm with a{" "}
+                or shoot me a{" "}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
                   className="text-blue-500 hover:underline"
