@@ -160,15 +160,46 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Cryptex",
+      description:
+        "A real-time crypto trading simulator built with Next.js, TailwindCSS, and Prisma, allowing users to track live cryptocurrency prices, manage virtual portfolios, and execute simulated trades without financial risk. It features real-time price updates, trade history tracking, and portfolio performance insights to help users understand market trends in a risk-free environment.",
+      href: "https://trycryptex.vercel.app",
+      dates: "Jan 2025 - Mar 2025",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PrismaORM",
+        "PostgreSQL",
+        "Clerk",
+        "Vercel",
+        "Charts",
+        "Shadcn",
+        "TailwindCSS",
+      ],
+      image: "/cryptex.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://trycryptex.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/rajatsachdeva31/cryptex",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
       title: "FormFlow",
       description:
-        "A Next.js application that allows users to create and customize beautiful forms with a drag-and-drop interface. Powered by cutting-edge technologies, this project offers seamless form creation, sharing, and submission tracking.",
+        "A customizable drag-and-drop form builder designed to simplify form creation and data collection. Built with Next.js, Dnd-kit, and Prisma, it enables users to create interactive forms, share them in real time, and track responses efficiently. With features like real-time collaboration, analytics, and seamless UI, FormFlow makes form-building intuitive and hassle-free.",
       href: "https://tryformflow.vercel.app",
       dates: "Nov 2024 - Dec 2024",
       technologies: [
         "Next.js",
         "TypeScript",
-        "Prisma",
+        "PrismaORM",
         "PostgreSQL",
         "Clerk",
         "Vercel",
