@@ -125,7 +125,7 @@ export const DATA = {
       title: "Full Stack Developer",
       logoUrl: "/credwise.png",
       start: "Jan 2025",
-      end: "Present",
+      end: "Apr 2025",
       description:
         "Built a web app, ImmigrateX, using the MERN stack to help immigrants access housing, car rentals, and essential resources for transitioning to Canada. Designed and developed client onboarding features for realtors and car dealerships, including document uploads, soft credit checks, and service listings.",
     },
