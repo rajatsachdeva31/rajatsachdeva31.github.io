@@ -29,7 +29,7 @@ export const ResumeCard = ({
   period,
   description,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(true);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -58,11 +58,7 @@ export const ResumeCard = ({
       </div>
 
       <div className="flex-grow ml-4 items-center flex-col group">
-        <Link
-          href={"/"}
-          className="cursor-pointer"
-          onClick={handleClick}
-        >
+        <Link href={"/"} className="cursor-pointer" onClick={handleClick}>
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">

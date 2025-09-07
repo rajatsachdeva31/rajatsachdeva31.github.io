@@ -76,6 +76,19 @@ export const DATA = {
     "Postman",
     "Vercel",
     "CursorAI",
+    "Spring Boot",
+    "NestJS",
+    "GraphQL",
+    "Kubernetes",
+    "Supabase",
+    "Prisma",
+    "Clerk",
+    "Microsoft Azure",
+    "Azure AI",
+    "Azure Data",
+    "Agile",
+    "System Design",
+    "Design Patterns",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -117,6 +130,30 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "ellwood Technology",
+      href: "https://ellwoodtechnology.ca/",
+      badges: [],
+      location: "Remote",
+      title: "Information Technology Consultant",
+      logoUrl: "/ellwood.png",
+      start: "Aug 2025",
+      end: "Present",
+      description:
+        "Build and maintain scalable web applications with Next.js, SQL, AWS, and Stripe, integrating e-signatures and automation workflows using Zapier and Python. Deliver IT solutions for law firms with Microsoft 365 and Azure administration, security, and optimization. Manage cloud deployments, database performance, and payment systems while collaborating with stakeholders to ensure high-quality, timely delivery.",
+    },
+    {
+      company: "Self Employed",
+      href: "",
+      badges: [],
+      location: "Remote",
+      title: "Freelance Web Developer",
+      logoUrl: "/freelance.png",
+      start: "May 2025",
+      end: "Aug 2025",
+      description:
+        "Developed a scalable eCommerce Admin Panel for Admin, Vendors, and Designers with payment integration, product management, analytics, and bank setup. Built a React.js frontend with state management, and secured REST APIs using Express.js with SQL and DynamoDB. Integrated AWS S3 for media, EC2 for hosting, and optimized for performance and scalability while collaborating with clients to deliver robust solutions.",
+    },
     {
       company: "Credwise",
       href: "https://credwise.ca/",
@@ -238,16 +275,25 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "TBC & Matera Fintech Weekend",
+      title: "HackTheBrain 2025 – Top 4 Finalist",
+      dates: "June 24th - 26th, 2025",
+      location: "Toronto, Ontario",
+      description:
+        "Placed in the Top 4 at HackTheBrain 2025 out of 150+ participants and 40+ teams. Built ImmiGrowAI, a community-first AI & Cloud platform to support new immigrants in Canada. Features included AI-powered resume tailoring and job matching, verified mentor connections, in-platform session booking, and an AI Career Coach for interview practice.",
+      image: "/hackthebrain.png",
+      links: [],
+    },
+    {
+      title: "TBC & Matera Fintech Weekend – Top 5 Finalist",
       dates: "November 8th - 10th, 2024",
       location: "North York, Ontario",
       description:
-        "Developed AI-powered fraud detection and middleware to detect fake QR codes, displaying risk scores to users and notifying merchants. Secured a spot in the top 6 finalists for innovative payment security solutions.",
+        "Developed AI-powered fraud detection and middleware to detect fake QR codes, displaying risk scores to users and notifying merchants. Secured a spot in the top 5 finalists for innovative payment security solutions.",
       image: "/matera.png",
       links: [],
     },
     {
-      title: "AWS DeepRacer Competition 2024",
+      title: "AWS DeepRacer Competition 2024 – 3rd Place",
       dates: "April 23th - 24th, 2024",
       location: "Etobicoke, Ontario",
       description:
