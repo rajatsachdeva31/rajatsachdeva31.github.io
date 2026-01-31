@@ -2,10 +2,12 @@
 module.exports = {
   siteUrl: "https://rajatsachdeva.me",
   generateRobotsTxt: true,
-  sitemapSize: 5000,
+
+  // 👇 force single sitemap file
+  sitemapSize: 100000,
+  generateIndexSitemap: false,
 
   transform: async (config, path) => {
-    // Homepage
     if (path === "/") {
       return {
         loc: path,
@@ -14,7 +16,6 @@ module.exports = {
       };
     }
 
-    // Blog index
     if (path === "/blog") {
       return {
         loc: path,
@@ -23,7 +24,6 @@ module.exports = {
       };
     }
 
-    // Blog posts
     if (path.startsWith("/blog/")) {
       return {
         loc: path,
@@ -32,7 +32,6 @@ module.exports = {
       };
     }
 
-    // Default pages
     return {
       loc: path,
       changefreq: "monthly",
