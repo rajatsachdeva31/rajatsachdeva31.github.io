@@ -135,12 +135,12 @@ export const DATA = {
       href: "https://coprep.ai/",
       badges: [],
       location: "Remote",
-      title: "Founder",
+      title: "Founding Engineer",
       logoUrl: "/coprep.png",
       start: "Sep 2025",
       end: "Present",
       description:
-        "Founded and scaled CoPrep AI, a platform for job seekers that provided all the tools they needed to succeed in their job search. It included resume builder, resume analyzer, mock interview, interview copilot, cover letter generator, linkedin optimizer, professional headshot generator.",
+        "Built and scaled CoPrep AI, a platform for job seekers that provided all the tools they needed to succeed in their job search. It included resume builder, resume analyzer, mock interview, interview copilot, cover letter generator, linkedin optimizer, professional headshot generator.",
     },
     {
       company: "ellwood Technology",
