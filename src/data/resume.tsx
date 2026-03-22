@@ -43,7 +43,7 @@ export const DATA = {
   description:
     "Full Stack Software Engineer | AWS & Azure Certified | React.js | Next.js | Node.js | Python | Frontend Specialist",
   summary:
-    "A Full Stack Software Engineer based in Canada with 4 years of experience crafting clean, responsive, and user-friendly web applications. I specialize in frontend magic with frameworks like React, Next, Angular and love building seamless, scalable solutions using JavaScript, Typescript, Node, AWS, and SQL. Let's connect and create something awesome!",
+    "A Full Stack Software Engineer based in Canada with over 4 years of experience crafting clean, responsive, and user-friendly web applications. I specialize in frontend magic with frameworks like React, Next, Angular and love building seamless, scalable solutions using JavaScript, Typescript, Node, AWS, and SQL. Let's connect and create something awesome!",
   avatarUrl: "/me.png",
   skills: [
     "React.js",
@@ -130,18 +130,6 @@ export const DATA = {
   },
 
   work: [
-    {
-      company: "CoPrep AI",
-      href: "https://coprep.ai/",
-      badges: [],
-      location: "Remote",
-      title: "Founding Engineer",
-      logoUrl: "/coprep.png",
-      start: "Sep 2025",
-      end: "Present",
-      description:
-        "Built and scaled CoPrep AI, a platform for job seekers that provided all the tools they needed to succeed in their job search. It included resume builder, resume analyzer, mock interview, interview copilot, cover letter generator, linkedin optimizer, professional headshot generator.",
-    },
     {
       company: "ellwood Technology",
       href: "https://ellwoodtechnology.ca/",
