@@ -138,7 +138,7 @@ export const DATA = {
       title: "Information Technology Consultant",
       logoUrl: "/ellwood.png",
       start: "Aug 2025",
-      end: "Present",
+      end: "May 2026",
       description:
         "Build and maintain scalable web applications with Next.js, SQL, AWS, and Stripe, integrating e-signatures and automation workflows using Zapier and Python. Deliver IT solutions for law firms with Microsoft 365 and Azure administration, security, and optimization. Manage cloud deployments, database performance, and payment systems while collaborating with stakeholders to ensure high-quality, timely delivery.",
     },
