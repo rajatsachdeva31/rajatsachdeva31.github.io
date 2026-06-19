@@ -73,6 +73,7 @@ export const DATA = {
     "Github Copilot",
     "Gitlab",
     "AWS",
+    "GCP",
     "Postman",
     "Vercel",
     "CursorAI",
@@ -210,6 +211,62 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "CoPrep AI",
+      description:
+        "CoPrep AI is an AI-powered platform designed to help individuals prepare for job interviews through realistic, AI-driven mock interviews. It uses advanced speech-to-text, natural language understanding, and large language models to simulate real interview scenarios, provide instant feedback on responses, and help users improve their communication and presentation skills for better interview performance.",
+      href: "https://www.coprep.ai",
+      dates: "Jul 2025 - Present",
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "Supabase",
+        "PostgreSQL",
+        "GCP",
+        "OpenAI",
+        "Gemini",
+        "Shadcn",
+        "TailwindCSS",
+      ],
+      image: "/coprepai.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://www.coprep.ai",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/coprep-ai",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "TypeInvoice",
+      description:
+        "TypeInvoice is an AI-powered platform designed to help individuals generate invoices in a few seconds. It uses advanced speech-to-text, natural language understanding, and large language models to generate invoices in real-time.",
+      href: "https://typeinvoice.com",
+      dates: "May 2026",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "PrismaORM",
+        "PostgreSQL",
+        "Clerk",
+        "Vercel",
+        "Shadcn",
+        "TailwindCSS",
+      ],
+      image: "/typeinvoice.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://typeinvoice.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
     {
       title: "Cryptex",
       description:
