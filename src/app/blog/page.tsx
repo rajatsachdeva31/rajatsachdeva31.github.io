@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { getBlogPosts } from "@/data/blog";
+import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -59,7 +60,7 @@ export default async function BlogPage() {
                   {post.metadata.summary}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  {post.metadata.publishedAt}
+                  {formatDate(post.metadata.publishedAt)}
                 </p>
               </div>
             </Link>
