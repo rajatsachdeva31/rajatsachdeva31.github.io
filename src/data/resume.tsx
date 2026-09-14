@@ -263,6 +263,38 @@ export const DATA = {
       ],
     },
     {
+      title: "ElevateGrad",
+      description:
+        "Student engagement and career opportunities in one platform. A university-focused platform connecting students with peers, campus activities, and career opportunities.",
+      href: "https://elevategrad.com/",
+      dates: "2024 - 2025",
+      technologies: ["React", "Node.js", "Firebase", "GCP", "Shadcn", "TailwindCSS"],
+      image: "/elevategrad.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://elevategrad.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Solovio",
+      description:
+        "Instagram conversation automation for solo creators. A creator operations product for automating Instagram replies, sending useful links, and capturing leads from audience conversations.",
+      href: "https://www.solovio.app/",
+      dates: "2026 - Present",
+      technologies: ["Next.js", "NestJS", "TypeScript", "PrismaORM", "PostgreSQL", "PrismaDB", "Vercel", "Shadcn", "TailwindCSS", "GCP", "Cloudflare", "Stripe", "OpenAI", "Redis", "WebSockets", "RabbitMQ"],
+      image: "/solovio.png",
+      links: [
+        {
+          type: "Website",
+          href: "https://www.solovio.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+    },
+    {
       title: "Cryptex",
       description:
         "A real-time crypto trading simulator built with Next.js, TailwindCSS, and Prisma, allowing users to track live cryptocurrency prices, manage virtual portfolios, and execute simulated trades without financial risk. It features real-time price updates, trade history tracking, and portfolio performance insights to help users understand market trends in a risk-free environment.",
