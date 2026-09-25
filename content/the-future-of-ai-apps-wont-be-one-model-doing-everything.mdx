@@ -1,0 +1,226 @@
+---
+title: "The Future of AI Apps Won’t Be One Model Doing Everything"
+publishedAt: "2026-09-24"
+summary: "Jev made me think differently about AI architecture: instead of asking one large model to handle every task, better products may combine specialized models, deterministic code, and human judgment."
+---
+
+For the past few years, building an AI feature has often followed the same pattern.
+
+Send everything to a large language model. Ask it to understand the context, make a decision, produce structured data, explain its reasoning, and write the final response.
+
+It works surprisingly well.
+
+But I am starting to wonder whether it is the architecture we will keep using.
+
+The release of **Jev**, a new decision model from TypeSafe AI, made this question more interesting to me. Jev is not designed to have a conversation or write a paragraph. It evaluates context and returns typed choices, scores, or probabilities that software can use directly.
+
+That sounds narrower than a general-purpose LLM.
+
+And that may be exactly the point.
+
+> The future of AI products may not be one powerful model doing everything. It may be several specialized components, each responsible for a smaller and clearer job.
+
+---
+
+## What Makes Jev Different?
+
+Most AI models people interact with are generative. You give them a prompt, and they produce text one token at a time.
+
+Jev has a different purpose.
+
+An application gives it some state—the context of what is happening—and a set of questions. It returns typed answers with probabilities attached. Those answers can be choices, scores, or boolean probabilities.
+
+For example, instead of asking a language model:
+
+> “Read this support message, decide how urgent it is, determine which team should handle it, and return valid JSON.”
+
+An application could ask Jev several defined questions:
+
+- Is this request urgent?
+- Which team should receive it?
+- How confident is the classification?
+- Should a human review it?
+
+The result is intended for code, not for a person to read as prose.
+
+Vercel's [introduction to Jev](https://vercel.com/blog/ai-gateway-jev-model-launch) describes it as a probabilistic decision model for structured decision-making in software. TypeSafe AI also reported significant speed and cost improvements over language models in its own workflow evaluations. Those numbers will need to be tested against real products, but the architectural idea is already valuable.
+
+Jev is not trying to be a better chatbot.
+
+It is trying to make the small decisions inside software more explicit.
+
+---
+
+## We Ask LLMs to Do Too Much
+
+Large language models are flexible, which makes them an easy default.
+
+They can classify, summarize, extract, route, score, reason, and generate. When I am prototyping, it is convenient to send one prompt and get back something that looks close to what I need.
+
+But flexibility comes with trade-offs.
+
+If my application only needs to choose between three routes, why should the model generate a paragraph? If I need a risk score, why should my code parse that score out of a text response? If the output must match a fixed schema, why am I asking a model that naturally wants to generate open-ended language?
+
+Developers have built good solutions around these problems:
+
+- Structured outputs
+- Tool calling
+- Schema validation
+- Retries and repair prompts
+- Guardrails
+- Output parsers
+
+These techniques are useful and will not disappear. Still, they can sometimes be signs that one model is being asked to perform several different jobs inside a single request.
+
+Jev raises a simpler question:
+
+> What if generation and judgment should be separate steps?
+
+---
+
+## Generation and Decision-Making Are Different Jobs
+
+Consider two tasks:
+
+1. Write a friendly response to a customer.
+2. Decide whether the customer needs a refund, technical support, or a human escalation.
+
+The first task benefits from language generation. Tone, context, and phrasing matter.
+
+The second task needs a dependable decision in a known shape. The application wants a value it can use in an `if` statement.
+
+A general-purpose LLM can perform both tasks. But that does not mean it should always perform them in the same call.
+
+A more deliberate architecture could look like this:
+
+1. Deterministic code handles anything that can be decided with clear rules.
+2. A decision model classifies or scores the uncertain cases.
+3. A language model generates text only when text is actually needed.
+4. Another evaluation step checks the result before an action is taken.
+5. A human receives cases where confidence is too low or the consequences are too important.
+
+This is less magical than asking one model to handle the entire workflow.
+
+It may also be easier to understand, test, and improve.
+
+---
+
+## A Practical Example: Instagram Automation
+
+This pattern is especially interesting to me while thinking about products like [**Solovio**](https://www.solovio.app/), which helps creators automate Instagram conversations.
+
+An incoming message can trigger several questions:
+
+- Is the person asking for a specific link?
+- Does the message match an existing automation?
+- Is it spam?
+- Does it need a personalized reply?
+- Should the creator handle it personally?
+
+It would be possible to send the entire message and all available context to one LLM, then ask it to decide what to do and write a reply.
+
+But a multi-model workflow could be more focused.
+
+First, normal application code could check explicit keywords, campaign rules, and account settings. Then a decision model such as Jev could classify the uncertain message, score whether it needs a human, and attach probabilities to those decisions.
+
+Only if the workflow needs a unique response would an LLM generate text. The application would still control whether the message is sent, delayed, or placed into a review queue.
+
+I am not saying this is already Solovio's architecture or that Jev is automatically the right choice for it. It is the kind of design I would want to test against the current approach.
+
+The important shift is that the LLM is no longer responsible for the entire outcome.
+
+It does the part it is good at: language.
+
+---
+
+## Confidence Is Useful Only When the Product Uses It
+
+One of the most interesting parts of Jev is that it returns probabilities.
+
+But a confidence value is not useful by itself. The product still needs to decide what different confidence levels mean.
+
+For a low-risk action, the workflow might continue automatically. For a message that could damage a customer relationship, the threshold should be higher. For a sensitive or irreversible action, the correct decision may always be human review.
+
+That means developers still need to answer difficult questions:
+
+- How is the model calibrated on our real data?
+- What threshold is safe enough for this action?
+- What happens when confidence is low?
+- Can the user correct a wrong decision?
+- Are we recording enough context to understand failures?
+
+Probabilities do not remove product responsibility.
+
+They make uncertainty visible so the application can respond to it.
+
+---
+
+## Smaller Jobs Can Make Systems Easier to Debug
+
+When one prompt handles an entire workflow, a bad result can be difficult to explain.
+
+Did the model misunderstand the input? Did it classify the intent incorrectly? Did it choose the wrong action? Did it understand the action but write a poor response? Did the output parser fail?
+
+Separating responsibilities creates clearer failure points.
+
+I can evaluate the router separately from the writer. I can measure how often an escalation decision is correct. I can change the generation model without rebuilding the classification step. I can send only uncertain cases to a more capable and expensive model.
+
+This does add orchestration. More components mean more interfaces, monitoring, and decisions about fallback behavior.
+
+Multi-model architecture is not automatically better architecture.
+
+It becomes useful when the boundaries are clear enough to make the product more reliable—not merely more complicated.
+
+---
+
+## Specialized Models Will Not Replace General Models
+
+I do not see Jev as a replacement for LLMs.
+
+It cannot do the open-ended writing, explanation, and conversation that make language models valuable. A typed choice is useful to software, but it is not a thoughtful email, a product description, or a helpful conversation.
+
+The more interesting relationship is collaboration.
+
+A decision model can determine what should happen next. A language model can generate the content. Deterministic code can enforce permissions and business rules. Humans can handle ambiguity and high-impact decisions.
+
+Each part has a job.
+
+That feels closer to how mature software is already designed. We do not expect one database, one service, or one function to own every responsibility. AI systems may evolve in the same direction.
+
+---
+
+## What I Would Test Before Using Jev
+
+New models arrive with exciting demos and impressive benchmarks. I would still want evidence from the actual workflow before changing a production system.
+
+My evaluation would focus on:
+
+- Accuracy on real examples from the product
+- Consistency when the wording changes slightly
+- Calibration of the returned probabilities
+- Latency at realistic traffic levels
+- Cost across the complete workflow, not just one call
+- Behavior on ambiguous or adversarial inputs
+- The quality of fallbacks when the model is uncertain
+
+I would also compare it with simpler alternatives.
+
+Sometimes a normal rule is enough. Sometimes a small classifier is more appropriate. Sometimes an LLM with structured output performs perfectly well. The goal is not to use a new model because it is new.
+
+The goal is to give each problem the simplest reliable solution.
+
+---
+
+## Final Thoughts
+
+Jev is interesting because it challenges an assumption that has become common in AI development: that every intelligent feature should begin and end with a general-purpose language model.
+
+Maybe the next generation of AI products will be built differently.
+
+They may use code for certainty, specialized models for judgment, language models for generation, and people for decisions that deserve human responsibility.
+
+The result may feel less like one all-knowing model and more like a well-designed team.
+
+For me, that is the bigger idea behind Jev.
+
+Not that it can do everything—but that useful AI software may improve when no single model has to.
