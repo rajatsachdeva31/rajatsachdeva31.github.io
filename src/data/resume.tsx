@@ -132,6 +132,17 @@ export const DATA = {
 
   work: [
     {
+      company: "HCLTech",
+      href: "https://www.hcltech.com/",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer",
+      logoUrl: "/hcl.png",
+      start: "Jun 2026",
+      end: "Present",
+      description: "",
+    },
+    {
       company: "ellwood Technology",
       href: "https://ellwoodtechnology.ca/",
       badges: [],
@@ -140,8 +151,7 @@ export const DATA = {
       logoUrl: "/ellwood.png",
       start: "Aug 2025",
       end: "May 2026",
-      description:
-        "Build and maintain scalable web applications with Next.js, SQL, AWS, and Stripe, integrating e-signatures and automation workflows using Zapier and Python. Deliver IT solutions for law firms with Microsoft 365 and Azure administration, security, and optimization. Manage cloud deployments, database performance, and payment systems while collaborating with stakeholders to ensure high-quality, timely delivery.",
+      description: "",
     },
     {
       company: "Self Employed",
@@ -152,8 +162,7 @@ export const DATA = {
       logoUrl: "/freelance.png",
       start: "May 2025",
       end: "Aug 2025",
-      description:
-        "Developed a scalable eCommerce Admin Panel for Admin, Vendors, and Designers with payment integration, product management, analytics, and bank setup. Built a React.js frontend with state management, and secured REST APIs using Express.js with SQL and DynamoDB. Integrated AWS S3 for media, EC2 for hosting, and optimized for performance and scalability while collaborating with clients to deliver robust solutions.",
+      description: "",
     },
     {
       company: "Credwise",
@@ -164,8 +173,7 @@ export const DATA = {
       logoUrl: "/credwise.png",
       start: "Jan 2025",
       end: "Apr 2025",
-      description:
-        "Built a web app, ImmigrateX, using the MERN stack to help immigrants access housing, car rentals, and essential resources for transitioning to Canada. Designed and developed client onboarding features for realtors and car dealerships, including document uploads, soft credit checks, and service listings.",
+      description: "",
     },
     {
       company: "Humber Polytechnic",
@@ -176,8 +184,7 @@ export const DATA = {
       logoUrl: "/humber.png",
       start: "Nov 2024",
       end: "Dec 2024",
-      description:
-        "Built a comprehensive resource library by collecting and verifying video resources, literature, and website articles to bridge theoretical knowledge with practical applications. Developed a specialized library of resources focused on Advanced Java, C#, data structures, and design patterns, supporting students and educators in mastering these critical technical topics.",
+      description: "",
     },
     {
       company: "Coforge",
@@ -188,8 +195,7 @@ export const DATA = {
       logoUrl: "/coforge.png",
       start: "May 2021",
       end: "Aug 2023",
-      description:
-        "Developed responsive web interfaces for the Lifewriter project, enhancing UI/UX for a leading US insurance company. Optimized application functionality by implementing React, Typescript, Spring Boot and SQL technologies, which decreased page load times by 20%. Enhanced team efficiency by actively participating in Agile ceremonies, collaborating with cross-functional teams and UI/UX designers to ensure brand consistency and accessibility.",
+      description: "",
     },
   ],
   education: [
@@ -234,7 +240,7 @@ export const DATA = {
           type: "Website",
           href: "https://www.coprep.ai",
           icon: <Icons.globe className="size-3" />,
-        }
+        },
       ],
     },
     {
@@ -268,7 +274,14 @@ export const DATA = {
         "Student engagement and career opportunities in one platform. A university-focused platform connecting students with peers, campus activities, and career opportunities.",
       href: "https://elevategrad.com/",
       dates: "2024 - 2025",
-      technologies: ["React", "Node.js", "Firebase", "GCP", "Shadcn", "TailwindCSS"],
+      technologies: [
+        "React",
+        "Node.js",
+        "Firebase",
+        "GCP",
+        "Shadcn",
+        "TailwindCSS",
+      ],
       image: "/elevategrad.png",
       links: [
         {
@@ -284,7 +297,24 @@ export const DATA = {
         "Instagram conversation automation for solo creators. A creator operations product for automating Instagram replies, sending useful links, and capturing leads from audience conversations.",
       href: "https://www.solovio.app/",
       dates: "2026 - Present",
-      technologies: ["Next.js", "NestJS", "TypeScript", "PrismaORM", "PostgreSQL", "PrismaDB", "Vercel", "Shadcn", "TailwindCSS", "GCP", "Cloudflare", "Stripe", "OpenAI", "Redis", "WebSockets", "RabbitMQ"],
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "PrismaORM",
+        "PostgreSQL",
+        "PrismaDB",
+        "Vercel",
+        "Shadcn",
+        "TailwindCSS",
+        "GCP",
+        "Cloudflare",
+        "Stripe",
+        "OpenAI",
+        "Redis",
+        "WebSockets",
+        "RabbitMQ",
+      ],
       image: "/solovio.png",
       links: [
         {
